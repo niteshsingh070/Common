@@ -1,0 +1,31 @@
+:root{--bg1:#ffe3ec;--bg2:#ffd0e0;--card:#fff;--text:#4a1d33;--accent:#ff4d85;--accent2:#ff7aa5;--soft:#fff0f5;--muted:#9a6a80}
+@media (prefers-color-scheme:dark){:root.dark{--card:#3f1a33;--text:#ffe6ef;--soft:#4d2040;--muted:#d9a3bb}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:"Quicksand","Trebuchet MS",system-ui,sans-serif;background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--text);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.hearts span{position:absolute;bottom:-40px;animation:rise linear infinite;opacity:.6}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.card{position:relative;background:var(--card);width:min(92vw,420px);padding:28px 22px;border-radius:26px;box-shadow:0 12px 40px rgba(255,77,133,.25);text-align:center;max-height:92%;overflow-y:auto}
+.emoji{font-size:64px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) scale(1.06)}}
+h1{font-size:23px;margin:10px 0 6px}
+p{color:var(--muted);margin:0 0 18px}
+.btns{display:flex;gap:14px;justify-content:center;align-items:center;min-height:90px;position:relative;flex-wrap:wrap}
+button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:12px 24px;cursor:pointer;transition:transform .2s,background .2s}
+.yes{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(255,77,133,.4)}
+.yes:active{transform:scale(.95)}
+.no{background:var(--soft);color:var(--muted)}
+.dots{margin-top:18px;display:flex;gap:6px;justify-content:center}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--soft)}
+.dots i.on{background:var(--accent)}
+label{display:block;text-align:left;font-size:13px;font-weight:700;margin:12px 0 4px}
+input,textarea{width:100%;font:inherit;padding:11px;border-radius:14px;border:2px solid var(--soft);background:var(--soft);color:var(--text)}
+input:focus,textarea:focus{outline:none;border-color:var(--accent2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--soft);color:var(--text);padding:8px 14px;font-size:14px}
+.chip.sel{background:var(--accent);color:#fff}
+.err{color:var(--accent);font-size:13px;min-height:18px;margin:8px 0}
+.fade{animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.summary{background:var(--soft);border-radius:16px;padding:14px;margin:14px 0;text-align:left;line-height:1.6}
