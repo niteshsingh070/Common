@@ -1,10 +1,10 @@
 // ✏️ CUSTOMIZE EVERYTHING HERE — no need to touch the other files.
 var CONFIG = {
   // Your name (shown at the end). Can also be set per link:  ?from=Raj
-  yourName: "Your Name",
+  yourName: "Nitesh",
 
   // Her name. Leave "" to not show a name. Can also be set per link:  ?to=Sara
-  herName: "",
+  herName: "Avishka",
 
   // Your WhatsApp number: country code + number, digits only (91 = India)
   whatsapp: "918005310750",
